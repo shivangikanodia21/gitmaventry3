@@ -20,6 +20,9 @@
   
 </distributionManagement>
 
+<scm>
+<connection>scm:git:https://github.com/shivangikanodia21/gitmaventry3.git</connection>
+</scm>
 
   
    <build>
