@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>mavenGittry3</groupId>
+  <artifactId>mavenGittry3</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>mavenGittry3</name>
+  <description>mavenGittry3</description>
+  
+<distributionManagement>
+
+<repository>
+<id>ftp-developer-release</id>
+<url>ftp://10.1.4.66/shivangi/release</url>
+</repository>
+  
+<snapshotRepository>
+<id>ftp-developer</id>
+<url>ftp://10.1.4.66/shivangi/</url>
+</snapshotRepository>
+  
+</distributionManagement>
+
+
+  
+   <build>
+   
+   
+     <extensions>
+   
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+         <artifactId>wagon-ftp</artifactId>
+         <version>2.10</version>
+      </extension>
+    </extensions>
+   
+ 	 <plugins>
+  					 <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-surefire-plugin</artifactId>
+                                <version>2.18.1</version>
+                                <configuration>
+                                        <suiteXmlFiles>
+                                                <suiteXmlFile>testng.xml</suiteXmlFile>
+                                        </suiteXmlFiles>
+                                </configuration>
+                    </plugin>
+                  
+                   <plugin>
+       								 <groupId>org.apache.maven.plugins</groupId>
+      								  <artifactId>maven-release-plugin</artifactId>
+        							<version>2.5.3</version>
+        		  </plugin>
+         </plugins>
+  
+  </build>
+  <dependencies>
+ <dependency>
+  <groupId>org.testng</groupId>
+  <artifactId>testng</artifactId>
+  <version>6.8</version>
+  <scope>test</scope>
+</dependency>
+</dependencies>
+
+
+</project>
