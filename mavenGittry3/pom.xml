@@ -21,7 +21,8 @@
 </distributionManagement>
 
 <scm>
-<connection>scm:git:https://github.com/shivangikanodia21/gitmaven3.1.git</connection>
+<connection>scm:git:git@github-ld:shivangikanodia21/gitmaven3.1.git</connection>
+<tag>HEAD</tag>
 </scm>
 
   
